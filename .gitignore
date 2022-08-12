@@ -1,0 +1,3 @@
+.flatpak-builder/
+build-dir/
+FlutterApp-Linux-Portable.tar.gz
