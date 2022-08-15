@@ -42,12 +42,12 @@ modules:
     sha256: 3d16e312265cf92658668d1aace692e3bfa8ff08b3449a124571b320ae3a8eac
 - shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json
 - shared-modules/libsecret/libsecret.json
-
 - name: vup
   buildsystem: simple
   build-commands:
   - mkdir -p Vup
-  - tar -xf FlutterApp-Linux-Portable.tar.gz -C Vup
+  - tar -xf Vup-0.12.0-BETA-Linux-raw-build.tar.gz
+  - cp -r build/* Vup
   - cp -r Vup /app/
   - chmod +x /app/Vup/vup
   - mkdir -p /app/bin
@@ -68,4 +68,7 @@ modules:
   - type: file
     path: app.vup.Vup.desktop
   - type: file
-    path: FlutterApp-Linux-Portable.tar.gz
+    url: https://github.com/lukehmcc/vup/releases/download/v0.12.0/Vup-0.12.0-BETA-Linux-raw-build.tar.gz
+    sha256: c631b0b11f0452631825aa6d02d11e726eef113b79ec962667d913180d139e1d
+
+
